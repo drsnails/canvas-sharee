@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init()">
+
+  <div class="inputs">
+    <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+  
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+      <input name="img" id="imgData" type="hidden" />
+      <button class="btn" type="submit">Publish</button>
+      <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>
+      <div class="share-container"></div>
+    </form>
+
+  </div>
+
+  <div class="canvas-container">
+    <canvas id="my-canvas" width="400" height="400" style="outline:1px solid green"></canvas>
+  </div>
+
+  <script src="js/upload-service.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
