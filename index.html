@@ -10,7 +10,7 @@
   <div class="inputs">
     <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
   
-    <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(event)">
       <input name="img" id="imgData" type="hidden" />
       <button class="btn" type="submit">Publish</button>
       <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">Download as jpeg</a>

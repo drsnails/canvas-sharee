@@ -1,9 +1,10 @@
 
 
 // on submit call to this function
-function uploadImg(elForm, ev) {
+function uploadImg(ev) {
     ev.preventDefault();
-    document.getElementById('imgData').value = gElCanvas.toDataURL("image/jpeg");
+    const canvasData = gElCanvas.toDataURL("image/jpeg");
+    document.getElementById('imgData').value = canvasData
 
     // A function to be called if request succeeds
     function onSuccess(uploadedImgUrl) {
@@ -13,8 +14,7 @@ function uploadImg(elForm, ev) {
            Share   
         </a>`
     }
-    const imgData = elForm.querySelector('input').value
-    doUploadImg(imgData, onSuccess);
+    doUploadImg(canvasData, onSuccess);
 }
 
 async function doUploadImg(imgData, onSuccess) {
